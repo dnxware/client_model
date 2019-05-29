@@ -1,4 +1,4 @@
-# Copyright 2013 Prometheus Team
+# Copyright 2013 dnxware Team
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -28,19 +28,19 @@ cpp/metrics.pb.h: metrics.proto
 go: go/metrics.pb.go
 
 go/metrics.pb.go: metrics.proto
-	protoc $< --go_out=import_path=github.com/prometheus/client_model/,paths=source_relative:go/
+	protoc $< --go_out=import_path=github.com/dnxware/client_model/,paths=source_relative:go/
 
-java: src/main/java/io/prometheus/client/Metrics.java pom.xml
+java: src/main/java/io/dnxware/client/Metrics.java pom.xml
 	mvn clean compile package
 
-src/main/java/io/prometheus/client/Metrics.java: metrics.proto
+src/main/java/io/dnxware/client/Metrics.java: metrics.proto
 	protoc $< --java_out=src/main/java
 
-python: python/prometheus/client/model/metrics_pb2.py
+python: python/dnxware/client/model/metrics_pb2.py
 
-python/prometheus/client/model/metrics_pb2.py: metrics.proto
-	mkdir -p python/prometheus/client/model
-	protoc $< --python_out=python/prometheus/client/model
+python/dnxware/client/model/metrics_pb2.py: metrics.proto
+	mkdir -p python/dnxware/client/model
+	protoc $< --python_out=python/dnxware/client/model
 
 ruby:
 	$(MAKE) -C ruby build

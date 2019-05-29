@@ -1,4 +1,4 @@
-// Copyright 2013 Prometheus Team
+// Copyright 2013 dnxware Team
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -13,9 +13,9 @@
 
 syntax = "proto2";
 
-package io.prometheus.client;
-option java_package = "io.prometheus.client";
-option go_package = "github.com/prometheus/client_model/go;io_prometheus_client";
+package io.dnxware.client;
+option java_package = "io.dnxware.client";
+option go_package = "github.com/dnxware/client_model/go;io_dnxware_client";
 
 message LabelPair {
   optional string name  = 1;

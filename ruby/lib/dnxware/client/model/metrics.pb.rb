@@ -1,7 +1,7 @@
-## Generated from metrics.proto for io.prometheus.client
+## Generated from metrics.proto for io.dnxware.client
 require "beefcake"
 
-module Prometheus
+module dnxware
   module Client
 
     module MetricType
